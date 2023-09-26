@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListEmpleadocincoTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListEmpleadocincoEmpty}" rendered="#{empleadocincoController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{empleadocincoController.items.rowCount > 0}">
+                    <h:outputText value="#{empleadocincoController.pagination.pageFirstItem + 1}..#{empleadocincoController.pagination.pageLastItem + 1}/#{empleadocincoController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{empleadocincoController.previous}" value="#{bundle.Previous} #{empleadocincoController.pagination.pageSize}" rendered="#{empleadocincoController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{empleadocincoController.next}" value="#{bundle.Next} #{empleadocincoController.pagination.pageSize}" rendered="#{empleadocincoController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{empleadocincoController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListEmpleadocincoTitle_idEmpleado}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.idEmpleado}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListEmpleadocincoTitle_nombreEmpleado}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.nombreEmpleado}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListEmpleadocincoTitle_apellidoEmpleado}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.apellidoEmpleado}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListEmpleadocincoTitle_idArea}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.idArea}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListEmpleadocincoTitle_idCargo}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.idCargo}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListEmpleadocincoTitle_idDocumento}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.idDocumento}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{empleadocincoController.prepareView}" value="#{bundle.ListEmpleadocincoViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{empleadocincoController.prepareEdit}" value="#{bundle.ListEmpleadocincoEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{empleadocincoController.destroy}" value="#{bundle.ListEmpleadocincoDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{empleadocincoController.prepareCreate}" value="#{bundle.ListEmpleadocincoCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListEmpleadocincoIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

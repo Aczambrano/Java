@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateEmpleadocincoTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateEmpleadocincoLabel_idEmpleado}" for="idEmpleado" />
+                    <h:inputText id="idEmpleado" value="#{empleadocincoController.selected.idEmpleado}" title="#{bundle.CreateEmpleadocincoTitle_idEmpleado}" requiredMessage="#{bundle.CreateEmpleadocincoRequiredMessage_idEmpleado}"/>
+                    <h:outputLabel value="#{bundle.CreateEmpleadocincoLabel_nombreEmpleado}" for="nombreEmpleado" />
+                    <h:inputText id="nombreEmpleado" value="#{empleadocincoController.selected.nombreEmpleado}" title="#{bundle.CreateEmpleadocincoTitle_nombreEmpleado}" required="true" requiredMessage="#{bundle.CreateEmpleadocincoRequiredMessage_nombreEmpleado}"/>
+                    <h:outputLabel value="#{bundle.CreateEmpleadocincoLabel_apellidoEmpleado}" for="apellidoEmpleado" />
+                    <h:inputText id="apellidoEmpleado" value="#{empleadocincoController.selected.apellidoEmpleado}" title="#{bundle.CreateEmpleadocincoTitle_apellidoEmpleado}" required="true" requiredMessage="#{bundle.CreateEmpleadocincoRequiredMessage_apellidoEmpleado}"/>
+                    <h:outputLabel value="#{bundle.CreateEmpleadocincoLabel_idArea}" for="idArea" />
+                    <h:selectOneMenu id="idArea" value="#{empleadocincoController.selected.idArea}" title="#{bundle.CreateEmpleadocincoTitle_idArea}" required="true" requiredMessage="#{bundle.CreateEmpleadocincoRequiredMessage_idArea}">
+                        <f:selectItems value="#{areacincoController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.CreateEmpleadocincoLabel_idCargo}" for="idCargo" />
+                    <h:selectOneMenu id="idCargo" value="#{empleadocincoController.selected.idCargo}" title="#{bundle.CreateEmpleadocincoTitle_idCargo}" required="true" requiredMessage="#{bundle.CreateEmpleadocincoRequiredMessage_idCargo}">
+                        <f:selectItems value="#{cargocincoController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.CreateEmpleadocincoLabel_idDocumento}" for="idDocumento" />
+                    <h:selectOneMenu id="idDocumento" value="#{empleadocincoController.selected.idDocumento}" title="#{bundle.CreateEmpleadocincoTitle_idDocumento}" required="true" requiredMessage="#{bundle.CreateEmpleadocincoRequiredMessage_idDocumento}">
+                        <f:selectItems value="#{documentocincoController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{empleadocincoController.create}" value="#{bundle.CreateEmpleadocincoSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{empleadocincoController.prepareList}" value="#{bundle.CreateEmpleadocincoShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateEmpleadocincoIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
