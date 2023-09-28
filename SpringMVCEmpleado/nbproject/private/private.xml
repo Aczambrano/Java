@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Anderson/Documents/NetBeansProjects/SpringMVCEmpleado/src/java/Controller/ControladorCategoria.java</file>
+            <file>file:/C:/Users/Anderson/Documents/NetBeansProjects/SpringMVCEmpleado/web/WEB-INF/jsp/editarCategoria.jsp</file>
+            <file>file:/C:/Users/Anderson/Documents/NetBeansProjects/SpringMVCEmpleado/web/WEB-INF/jsp/marca.jsp</file>
+            <file>file:/C:/Users/Anderson/Documents/NetBeansProjects/SpringMVCEmpleado/src/java/Controller/ControladorProducto.java</file>
+            <file>file:/C:/Users/Anderson/Documents/NetBeansProjects/SpringMVCEmpleado/web/WEB-INF/jsp/index.jsp</file>
+            <file>file:/C:/Users/Anderson/Documents/NetBeansProjects/SpringMVCEmpleado/src/java/Model/Categoria.java</file>
+            <file>file:/C:/Users/Anderson/Documents/NetBeansProjects/SpringMVCEmpleado/src/java/config/Conexion.java</file>
+            <file>file:/C:/Users/Anderson/Documents/NetBeansProjects/SpringMVCEmpleado/web/WEB-INF/jsp/editarMarca.jsp</file>
+            <file>file:/C:/Users/Anderson/Documents/NetBeansProjects/SpringMVCEmpleado/web/WEB-INF/jsp/agregarProducto.jsp</file>
+            <file>file:/C:/Users/Anderson/Documents/NetBeansProjects/SpringMVCEmpleado/web/WEB-INF/dispatcher-servlet.xml</file>
+            <file>file:/C:/Users/Anderson/Documents/NetBeansProjects/SpringMVCEmpleado/web/WEB-INF/jsp/producto.jsp</file>
+            <file>file:/C:/Users/Anderson/Documents/NetBeansProjects/SpringMVCEmpleado/src/java/Model/Producto.java</file>
+            <file>file:/C:/Users/Anderson/Documents/NetBeansProjects/SpringMVCEmpleado/web/WEB-INF/jsp/agregarMarca.jsp</file>
+            <file>file:/C:/Users/Anderson/Documents/NetBeansProjects/SpringMVCEmpleado/web/WEB-INF/jsp/editarProducto.jsp</file>
+            <file>file:/C:/Users/Anderson/Documents/NetBeansProjects/SpringMVCEmpleado/src/java/Model/Marca.java</file>
+            <file>file:/C:/Users/Anderson/Documents/NetBeansProjects/SpringMVCEmpleado/web/WEB-INF/jsp/agregarCategoria.jsp</file>
+            <file>file:/C:/Users/Anderson/Documents/NetBeansProjects/SpringMVCEmpleado/web/WEB-INF/jsp/categoria.jsp</file>
+            <file>file:/C:/Users/Anderson/Documents/NetBeansProjects/SpringMVCEmpleado/src/java/Controller/ControladorMarca.java</file>
+        </group>
+    </open-files>
+</project-private>
